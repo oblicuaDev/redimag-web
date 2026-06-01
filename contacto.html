@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | REDIMAG</title>
+    <meta
+      name="description"
+      content="Contacta a REDIMAG por WhatsApp o deja una consulta sobre insumos veterinarios, líneas de producto y disponibilidad."
+    />
+    <meta property="og:title" content="Contacto | REDIMAG" />
+    <meta property="og:description" content="Formulario y WhatsApp para asesoría REDIMAG." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <span></span>
+          <a class="js-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp: +57 300 000 0000</a>
+        </div>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de REDIMAG">
+          <img src="assets/logo.png" alt="REDIMAG" />
+        </a>
+        <form class="header-search" role="search" action="catalogo.html">
+          <label class="sr-only" for="site-search">Buscar en el catálogo</label>
+          <input class="header-search-input" id="site-search" name="buscar" type="search" placeholder="Buscar producto o línea" autocomplete="off" />
+          <button type="submit" aria-label="Buscar en el catálogo"><span aria-hidden="true">⌕</span></button>
+        </form>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <div class="nav-dropdown">
+            <a href="catalogo.html">Catálogo</a>
+            <div class="submenu" aria-label="Submenú líneas de producto">
+              <a href="catalogo.html?linea=farmacos">Fármacos y medicamentos</a>
+              <a href="catalogo.html?linea=reproduccion">Reproducción animal</a>
+              <a href="catalogo.html?linea=nutricion">Nutrición</a>
+              <a href="catalogo.html?linea=equipamiento">Accesorios y equipamiento</a>
+            </div>
+          </div>
+          <a href="nosotros.html">Nosotros</a>
+          <a class="active" href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section contact-section contact-first-section">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <span class="eyebrow">Datos de contacto</span>
+            <h2>Asesoría directa para catálogo veterinario</h2>
+            <p>También puedes dejar una consulta visual. El formulario no envía datos a un backend.</p>
+            <ul class="contact-list">
+              <li><strong>WhatsApp:</strong> <a class="js-whatsapp" href="#" target="_blank" rel="noopener">+57 300 000 0000</a></li>
+              <li><strong>Teléfono:</strong> +57 300 000 0000</li>
+              <li><strong>Correo:</strong> contacto@redimag.com</li>
+              <li><strong>Ubicación:</strong> Colombia, atención nacional</li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" placeholder="+57 300 000 0000" required />
+
+            <label for="topic">Tipo de consulta</label>
+            <select id="topic" name="topic" required>
+              <option value="">Selecciona una opción</option>
+              <option>Fármacos y medicamentos</option>
+              <option>Reproducción animal</option>
+              <option>Nutrición</option>
+              <option>Accesorios y equipamiento</option>
+              <option>Asesoría general</option>
+            </select>
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos qué producto o línea necesitas consultar"></textarea>
+
+            <button class="btn btn-primary" type="submit">Enviar consulta</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid footer-grid-compact">
+        <div>
+          <h2>Menú rápido</h2>
+          <a href="index.html">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div>
+          <h2>Líneas de producto</h2>
+          <a href="catalogo.html?linea=farmacos">Fármacos y medicamentos</a>
+          <a href="catalogo.html?linea=reproduccion">Reproducción animal</a>
+          <a href="catalogo.html?linea=nutricion">Nutrición</a>
+          <a href="catalogo.html?linea=equipamiento">Accesorios y equipamiento</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> REDIMAG. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://lab.oblicua.co/credits/credits.js"></script>
+    <script src="js/main.js"></script>
+    <a class="floating-whatsapp js-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">WA</a>
+  </body>
+</html>
