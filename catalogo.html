@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo REDIMAG | Insumos veterinarios por línea</title>
+    <meta
+      name="description"
+      content="Explora el catálogo consultivo REDIMAG por línea, especie y aplicación. Solicita asesoría directa por WhatsApp."
+    />
+    <meta property="og:title" content="Catálogo REDIMAG" />
+    <meta property="og:description" content="Productos veterinarios por línea con filtros y consulta por WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <span></span>
+          <a class="js-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp: +57 300 000 0000</a>
+        </div>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de REDIMAG">
+          <img src="assets/logo.png" alt="REDIMAG" />
+        </a>
+        <form class="header-search" role="search" action="catalogo.html">
+          <label class="sr-only" for="site-search">Buscar en el catálogo</label>
+          <input class="header-search-input" id="site-search" name="buscar" type="search" placeholder="Buscar producto o línea" autocomplete="off" />
+          <button type="submit" aria-label="Buscar en el catálogo"><span aria-hidden="true">⌕</span></button>
+        </form>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <div class="nav-dropdown">
+            <a class="active" href="catalogo.html">Catálogo</a>
+            <div class="submenu" aria-label="Submenú líneas de producto">
+              <a href="catalogo.html?linea=farmacos">Fármacos y medicamentos</a>
+              <a href="catalogo.html?linea=reproduccion">Reproducción animal</a>
+              <a href="catalogo.html?linea=nutricion">Nutrición</a>
+              <a href="catalogo.html?linea=equipamiento">Accesorios y equipamiento</a>
+            </div>
+          </div>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section catalog-page catalog-first-section">
+        <div class="container catalog-layout">
+          <aside class="catalog-sidebar" aria-label="Filtros del catálogo">
+            <div class="filter-panel">
+              <h2>Filtrar catálogo</h2>
+              <fieldset class="checkbox-group">
+                <legend>Línea de producto</legend>
+                <label><input class="line-filter" type="checkbox" value="farmacos" /> Fármacos y medicamentos</label>
+                <label><input class="line-filter" type="checkbox" value="reproduccion" /> Reproducción animal</label>
+                <label><input class="line-filter" type="checkbox" value="nutricion" /> Nutrición</label>
+                <label><input class="line-filter" type="checkbox" value="equipamiento" /> Accesorios y equipamiento</label>
+              </fieldset>
+
+              <fieldset class="checkbox-group">
+                <legend>Especie / uso</legend>
+                <label><input class="species-filter" type="checkbox" value="bovinos" /> Bovinos</label>
+                <label><input class="species-filter" type="checkbox" value="mascotas" /> Mascotas</label>
+                <label><input class="species-filter" type="checkbox" value="campo" /> Campo y producción</label>
+                <label><input class="species-filter" type="checkbox" value="clinica" /> Clínica veterinaria</label>
+              </fieldset>
+
+              <button class="btn btn-secondary reset-filters" type="button">Limpiar filtros</button>
+            </div>
+          </aside>
+
+          <div class="catalog-content">
+            <div class="catalog-toolbar">
+              <div>
+                <span class="eyebrow">Líneas</span>
+                <h2>Productos disponibles para consulta</h2>
+              </div>
+              <p><strong id="result-count">0</strong> productos visibles</p>
+            </div>
+
+            <div class="catalog-grid">
+              <article class="product-card" data-slug="antibiotico-veterinario-amplio-espectro" data-category="farmacos" data-species="bovinos clinica campo" data-type="salud">
+                <img class="product-image" src="assets/product.png" alt="Antibiótico veterinario" />
+                <span class="category-badge badge-red">Fármacos y medicamentos</span>
+                <h3>Antibiótico veterinario de amplio espectro</h3>
+              </article>
+
+              <article class="product-card" data-slug="antiinflamatorio-veterinario" data-category="farmacos" data-species="bovinos mascotas clinica" data-type="salud">
+                <img class="product-image" src="assets/product.png" alt="Antiinflamatorio veterinario" />
+                <span class="category-badge badge-red">Fármacos y medicamentos</span>
+                <h3>Antiinflamatorio veterinario</h3>
+              </article>
+
+              <article class="product-card" data-slug="desparasitante-veterinario" data-category="farmacos" data-species="mascotas clinica" data-type="salud">
+                <img class="product-image" src="assets/product.png" alt="Desparasitante veterinario" />
+                <span class="category-badge badge-red">Fármacos y medicamentos</span>
+                <h3>Desparasitante veterinario</h3>
+              </article>
+
+              <article class="product-card" data-slug="kit-inseminacion-artificial" data-category="reproduccion" data-species="bovinos campo" data-type="reproduccion">
+                <img class="product-image" src="assets/product.png" alt="Kit de inseminación artificial" />
+                <span class="category-badge badge-blue">Reproducción animal</span>
+                <h3>Kit de inseminación artificial</h3>
+              </article>
+
+              <article class="product-card" data-slug="guantes-palpacion-veterinaria" data-category="reproduccion" data-species="bovinos campo clinica" data-type="reproduccion">
+                <img class="product-image" src="assets/product.png" alt="Guantes de palpación veterinaria" />
+                <span class="category-badge badge-blue">Reproducción animal</span>
+                <h3>Guantes de palpación veterinaria</h3>
+              </article>
+
+              <article class="product-card" data-slug="cateter-reproductivo-bovino" data-category="reproduccion" data-species="bovinos campo" data-type="reproduccion">
+                <img class="product-image" src="assets/product.png" alt="Catéter reproductivo bovino" />
+                <span class="category-badge badge-blue">Reproducción animal</span>
+                <h3>Catéter reproductivo bovino</h3>
+              </article>
+
+              <article class="product-card" data-slug="suplemento-mineral-bovinos" data-category="nutricion" data-species="bovinos campo" data-type="nutricion">
+                <img class="product-image" src="assets/product.png" alt="Suplemento mineral bovino" />
+                <span class="category-badge badge-green">Nutrición</span>
+                <h3>Suplemento mineral para bovinos</h3>
+              </article>
+
+              <article class="product-card" data-slug="alimento-nutricional-mascotas" data-category="nutricion" data-species="mascotas clinica" data-type="nutricion">
+                <img class="product-image" src="assets/product.png" alt="Alimento nutricional para mascotas" />
+                <span class="category-badge badge-green">Nutrición</span>
+                <h3>Alimento nutricional para mascotas</h3>
+              </article>
+
+              <article class="product-card" data-slug="bloque-nutricional-ganadero" data-category="nutricion" data-species="bovinos campo" data-type="nutricion">
+                <img class="product-image" src="assets/product.png" alt="Bloque nutricional ganadero" />
+                <span class="category-badge badge-green">Nutrición</span>
+                <h3>Bloque nutricional ganadero</h3>
+              </article>
+
+              <article class="product-card" data-slug="jeringa-dosificadora-veterinaria" data-category="equipamiento" data-species="bovinos campo clinica" data-type="operacion">
+                <img class="product-image" src="assets/product.png" alt="Jeringa dosificadora veterinaria" />
+                <span class="category-badge badge-yellow">Accesorios y equipamiento</span>
+                <h3>Jeringa dosificadora veterinaria</h3>
+              </article>
+
+              <article class="product-card" data-slug="bebedero-comedero-ganadero" data-category="equipamiento" data-species="bovinos campo" data-type="operacion">
+                <img class="product-image" src="assets/product.png" alt="Bebedero o comedero ganadero" />
+                <span class="category-badge badge-yellow">Accesorios y equipamiento</span>
+                <h3>Bebedero o comedero ganadero</h3>
+              </article>
+
+              <article class="product-card" data-slug="maletin-veterinario-campo" data-category="equipamiento" data-species="mascotas clinica" data-type="operacion">
+                <img class="product-image" src="assets/product.png" alt="Maletín veterinario" />
+                <span class="category-badge badge-yellow">Accesorios y equipamiento</span>
+                <h3>Maletín veterinario de campo</h3>
+              </article>
+            </div>
+
+            <p class="empty-state" id="empty-state" hidden>No encontramos productos con esos filtros. Prueba otra línea o consulta por WhatsApp.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid footer-grid-compact">
+        <div>
+          <h2>Menú rápido</h2>
+          <a href="index.html">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div>
+          <h2>Líneas de producto</h2>
+          <a href="catalogo.html?linea=farmacos">Fármacos y medicamentos</a>
+          <a href="catalogo.html?linea=reproduccion">Reproducción animal</a>
+          <a href="catalogo.html?linea=nutricion">Nutrición</a>
+          <a href="catalogo.html?linea=equipamiento">Accesorios y equipamiento</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> REDIMAG. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://lab.oblicua.co/credits/credits.js"></script>
+    <script src="js/main.js"></script>
+    <a class="floating-whatsapp js-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">WA</a>
+  </body>
+</html>
