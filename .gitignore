@@ -1,0 +1,12 @@
+# Scripts de migración / datos locales
+insert-productos.php
+catalogo-productos.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
