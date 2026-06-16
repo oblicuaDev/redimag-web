@@ -1716,8 +1716,21 @@ body.modal-open {
   }
 
   .footer-grid-compact {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-social:hover {
+  opacity: 1;
 }
 
 @media (min-width: 1120px) {
