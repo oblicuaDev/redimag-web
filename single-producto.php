@@ -57,7 +57,6 @@ if ( $especies ) {
 
           <?php if ( $precio ) : ?>
           <div class="product-price">
-            <span class="product-price__label">Precio de venta al público</span>
             <strong class="product-price__value">$<?php echo number_format( (int) $precio, 0, ',', '.' ); ?></strong>
           </div>
           <?php endif; ?>
