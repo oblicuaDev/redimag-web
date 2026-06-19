@@ -182,6 +182,38 @@
     </div>
   </section>
 
+  <?php
+  $aliados = get_posts( [
+      'post_type'      => 'aliado',
+      'posts_per_page' => -1,
+      'post_status'    => 'publish',
+      'orderby'        => 'menu_order',
+      'order'          => 'ASC',
+  ] );
+  ?>
+  <?php if ( $aliados ) : ?>
+  <section class="section home-partners">
+    <div class="container">
+      <div class="section-heading" style="text-align:center; margin-inline: auto;">
+        <span class="eyebrow">Marcas que distribuimos</span>
+        <h2>Aliados comerciales</h2>
+      </div>
+      <div class="partners-grid">
+        <?php foreach ( $aliados as $aliado ) : ?>
+          <?php if ( has_post_thumbnail( $aliado->ID ) ) : ?>
+          <div class="partner-logo">
+            <?php echo get_the_post_thumbnail( $aliado->ID, 'medium', [
+                'alt'     => esc_attr( $aliado->post_title ),
+                'loading' => 'lazy',
+            ] ); ?>
+          </div>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
   <section class="page-hero catalog-home-band">
     <div class="container page-hero-grid">
       <div>

@@ -127,6 +127,22 @@ add_action( 'init', function () {
         'supports'     => [ 'title', 'thumbnail', 'editor', 'excerpt' ],
     ] );
 
+    register_post_type( 'aliado', [
+        'labels'      => [
+            'name'          => 'Aliados comerciales',
+            'singular_name' => 'Aliado',
+            'add_new_item'  => 'Añadir aliado',
+            'edit_item'     => 'Editar aliado',
+            'all_items'     => 'Todos los aliados',
+        ],
+        'public'       => false,
+        'show_ui'      => true,
+        'show_in_menu' => true,
+        'show_in_rest' => true,
+        'menu_icon'    => 'dashicons-building',
+        'supports'     => [ 'title', 'thumbnail' ],
+    ] );
+
 } );
 
 // ─── ACF Field Groups ─────────────────────────────────────────────────────────
