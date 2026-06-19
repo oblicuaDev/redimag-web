@@ -55,6 +55,13 @@ if ( $especies ) {
             <p><?php the_excerpt(); ?></p>
           <?php endif; ?>
 
+          <?php if ( $precio ) : ?>
+          <div class="product-price">
+            <span class="product-price__label">Precio de venta al público</span>
+            <strong class="product-price__value">$<?php echo number_format( (int) $precio, 0, ',', '.' ); ?></strong>
+          </div>
+          <?php endif; ?>
+
           <div class="detail-info-grid">
             <?php if ( $sku ) : ?>
             <div>
@@ -72,13 +79,6 @@ if ( $especies ) {
             <div>
               <strong>Especie</strong>
               <span><?php echo implode( ', ', $especies_nombres ); ?></span>
-            </div>
-            <?php endif; ?>
-
-            <?php if ( $precio ) : ?>
-            <div>
-              <strong>Precio</strong>
-              <span>$<?php echo number_format( (int) $precio, 0, ',', '.' ); ?></span>
             </div>
             <?php endif; ?>
 
