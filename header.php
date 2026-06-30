@@ -10,6 +10,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TZTT3Z2M');</script>
   <!-- End Google Tag Manager -->
+  <link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() . '/images/favicon.png' ); ?>" />
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
